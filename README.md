@@ -1,14 +1,15 @@
-# Dink-Ally Sports Center Open Play Booking
-GitHub-ready mobile responsive PWA for Dink-Ally Sports Center, Cordova, Cebu.
+# Dink-Ally Sports Center Court Booking v3
 
-## Features
-- Dink-Ally exclusive branding and fixed venue
-- Open Play schedule grid inspired by modern court booking systems
-- Player slot reservation, confirmation code, My Booking
-- Organizer dashboard, event creation/editing, player list
-- PWA manifest/service worker
+GitHub-ready mobile booking prototype exclusive to Dink-Ally Sports Center.
 
-## Deploy on GitHub Pages
-Upload all files to the root of a GitHub repository, then enable GitHub Pages from the main branch/root.
+## Booking rules
+- Customer chooses a date.
+- Court hours: 8:00 AM through 5:00 AM the following day.
+- Rate: PHP 300 per hour.
+- Customer can select 1 to 8 hourly slots.
+- Proceed to Payment shows the selected hours and total.
+- In this prototype, the payment screen uses a **Simulate Successful Payment** button.
+- After simulated successful payment, selected slots are marked Reserved.
 
-Current version stores data in the browser (localStorage). For multi-device live booking, connect Firebase/Firestore next.
+## Important before production
+This version stores bookings in the browser only. For real multi-device reservations and real payment confirmation, connect Firebase (or another shared backend) plus a payment gateway/webhook. Reservation locking should be done server-side to prevent double booking.
